@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Professional QA Engineer & Tester with 1+ years experience in Manual Testing, Automation Testing, API Testing, and Performance Testing. Expert in Selenium, Postman, and Test Case Design.">
+  <meta name="keywords"
+    content="QA Engineer, Software Tester, Manual Testing, Automation Testing, Selenium, API Testing, Postman, Quality Assurance">
+  <meta name="author" content="QA Professional">
+  <title>QA Engineer | Manual & Automation Testing Expert</title>
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card-bg: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #f97373;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.7);
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 999px;
+      --transition-fast: 0.2s ease;
+      --transition-med: 0.3s ease;
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      padding: 0 2.25rem;
+    }
+
+    /* Header & Navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75), transparent);
+      border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      background: radial-gradient(circle at top, #1d4ed8, #020617);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.8), 0 0 35px rgba(56, 189, 248, 0.3);
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--muted);
+      padding: 0.2rem 0;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.1rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #38bdf8, #22c55e);
+      border-radius: 999px;
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      gap: 0.6rem;
+      /* gap: 1rem !important; */
+    }
+
+    .nav-wrapper {
+      padding-bottom: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background var(--transition-med), color var(--transition-med), transform 0.1s ease-out,
+        box-shadow var(--transition-med), border-color var(--transition-med);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      border-color: rgba(148, 163, 184, 0.2);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(56, 189, 248, 0.5);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* Hamburger */
+
+    .nav-toggle {
+      display: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 18px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 999px;
+      position: relative;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--text);
+      transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+    }
+
+    .nav-toggle span::before {
+      top: -6px;
+    }
+
+    .nav-toggle span::after {
+      bottom: -6px;
+    }
+
+    .nav-toggle.open span {
+      background: transparent;
+    }
+
+    .nav-toggle.open span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .nav-toggle.open span::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-label-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #38bdf8, #22c55e, #a855f7);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      max-width: 34rem;
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      font-size: 0.73rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+    }
+
+    .tag-accent {
+      border-color: rgba(56, 189, 248, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-block span {
+      display: block;
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: #6b7280;
+    }
+
+    .hero-meta-value {
+      font-weight: 600;
+      margin-top: 0.15rem;
+    }
+
+    /* Hero right */
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.06), rgba(15, 23, 42, 0.98));
+      padding: 1.2rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.7rem;
+      color: var(--muted);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-profile {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 24px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      overflow: hidden;
+      background: radial-gradient(circle at top left, #38bdf8, #4b5563);
+      /* 38bdf8 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0b1120;
+    }
+
+    .hero-profile-text h2 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-profile-text span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-stack span {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--muted);
+    }
+
+    .hero-highlight {
+      padding: 0.8rem;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 0.78rem;
+      color: #cbd5f5;
+    }
+
+    .hero-highlight strong {
+      color: #e5e7eb;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2.25rem;
+    }
+
+    section:nth-of-type(odd) {
+      background: radial-gradient(circle at top center, rgba(15, 23, 42, 0.4), transparent 55%);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      /* color: #9ca3af; */
+      color: #cbd5f6;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 28rem;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text {
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat-card {
+      background: var(--dark-light);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background: var(--dark-light);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      transition: all 0.3s;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    }
+
+    .skill-category h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-category ul {
+      list-style: none;
+    }
+
+    .skill-category li {
+      padding: 0.5rem 0;
+      color: var(--text-muted);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .skill-category li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      /* color: var(--success); */
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* Services Section */
+    /* .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--dark-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        } */
+
+    /* GPT Services */
+    /* Services Section */
+
+    .services-title {
+      font-size: 1.4rem;
+      letter-spacing: 0.12em;
+      color: #cbd5f6;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .services-subtitle {
+      color: #8b9bbd;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* Grid Layout */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    /* Card Layout (same style as first screenshot) */
+    .service-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 22px;
+      padding: 1.6rem 1.4rem;
+      transition: 0.25s ease;
+      position: relative;
+    }
+
+    /* Hover Effect — Same as First Screenshot */
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(111, 152, 255, 0.55);
+      box-shadow: 0 0 28px rgba(111, 152, 255, 0.3);
+    }
+
+    /* Service Icon */
+    .service-icon {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #7ca4ff;
+    }
+
+    /* Card Headings */
+    .service-heading {
+      font-size: 1.3rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .service-meta {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7c88a8;
+      margin-bottom: 1rem;
+    }
+
+    /* Bullet List */
+    .service-list {
+      color: #d6defd;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .service-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tags */
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      padding: 0.25rem 0.65rem;
+      font-size: 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 50px;
+      color: #8da4ff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: var(--dark-light);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .contact-item:hover {
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    .contact-details h4 {
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-details p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .contact-form {
+      background: var(--dark-light);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem;
+      background: var(--dark);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-light);
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.98);
+        width: 100%;
+        padding: 2rem;
+        gap: 1rem;
+        transition: right 0.3s;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .about-content,
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1920px) {
+      section {
+        max-width: 1400px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <nav class="nav" aria-label="Main navigation">
+        <div class="logo">
+          <div class="logo-badge" aria-label="Preet initial avatar">P</div>
+          <div>
+            <div class="logo-text-main">Rachana</div>
+            <div class="logo-text-sub">Freelance QA Tester</div>
+          </div>
+        </div>
+
+        <div class="nav-links-cta">
+          <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <button class="btn btn-outline" onclick="scrollToSection('contact')">
+              Let’s Work
+            </button>
+            <!-- CV link placeholder -->
+            <a class="btn btn-primary" href="./Rachana Jaiswar.pdf" target="_blank" rel="noopener">
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero" aria-label="Intro section">
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-label">
+              <span class="hero-label-dot"></span>
+              Available for freelance QA projects
+            </div>
+            <h1 class="hero-title">
+              Freelance <span>QA Tester</span> for Web, Mobile & APIs
+            </h1>
+            <p class="hero-subtitle">
+              I help startups and teams ship stable, user-friendly products through
+              <strong>manual, automation, and API testing</strong>. I test like a real user,
+              document like a pro, and give your developers clear, actionable bug reports.
+            </p>
+
+            <div class="hero-tags">
+              <span class="tag-accent">Manual & Automation QA</span>
+              <span class="tag">Web & Mobile App Testing</span>
+              <span class="tag">API & Postman Testing</span>
+              <span class="tag">Selenium • Katalon • JMeter</span>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                Hire me for QA
+              </button>
+              <button class="btn btn-outline" onclick="scrollToSection('services')">
+                View Services
+              </button>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Experience</span>
+                <span class="hero-meta-value">1+ years industry QA</span>
+              </div>
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Focus</span>
+                <span class="hero-meta-value">Web, Mobile, API Testing</span>
+              </div>
+              <div class="hero-meta-block">
+                <span class="hero-meta-label">Location</span>
+                <span class="hero-meta-value">India • Remote Worldwide</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="QA profile summary">
+            <div class="hero-badge">Manual • Automation • API</div>
+            <div class="hero-profile">
+              <div class="hero-avatar" aria-hidden="true">QA</div>
+              <div class="hero-profile-text">
+                <h2>Quality-First Testing Partner</h2>
+                <span>Manual, Automation & API Testing for real-world products</span>
+              </div>
+            </div>
+
+            <div class="hero-stack">
+              <span>Selenium</span>
+              <span>Katalon Studio</span>
+              <span>Postman</span>
+              <span>JMeter</span>
+              <span>Java</span>
+              <span>Node.js</span>
+            </div>
+
+            <div class="hero-highlight">
+              I specialize in <strong>Manual testing, Web & Mobile App Testing, Regression,
+                Functional, UAT, API Testing (Postman), and Automation via Selenium, Katalon Studio
+                and Playwright</strong>. I also work with SQL, GitHub, and performance/user testing
+              to give you a detailed and practical QA report.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <!-- <p class="section-subtitle">Dedicated QA professional committed to delivering quality software</p> -->
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I hold expertise in <strong>Manual testing, Mobile and Web App Testing, Regression,
+              Functional, UAT, API Testing, Postman and Automation testing via Selenium,
+              Katalon Studio and Playwright</strong>, with more than <strong>1+ years</strong> of industry-level
+            experience.
+          </p>
+          <p>
+            I have strong skills in <strong>writing and reviewing test cases and test plans</strong>,
+            as well as working with <strong>SQL and GitHub</strong>. I’ve contributed to several
+            user testing and performance testing efforts, helping teams identify critical issues
+            before release and avoid costly production defects.
+          </p>
+          <p>
+            My approach is simple: <strong>test like a real user, think like a developer, and
+              document like a QA lead</strong>. If your goal is to ship a reliable product, I’ll
+            help you get there with structured, detailed, and honest testing.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-number">1+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Tested</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Bugs Found</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Expertise</h2>
+      <p class="section-subtitle">Comprehensive testing capabilities across multiple domains</p>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>🔍 Manual Testing</h3>
+          <ul>
+            <li>Functional, Regression, Smoke & Sanity Testing</li>
+            <li>UI/UX Review and Responsive Testing</li>
+            <li>Test Case Design</li>
+            <li>Bug Reporting with detailed evidence</li>
+            <li>Cross Browser Testing</li>
+            <li>E-commerce & Web App Testing</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>🤖 Automation Testing</h3>
+          <ul>
+            <li>Selenium WebDriver (Java)</li>
+            <li>TestNG, Maven</li>
+            <li>Page Object Model (POM)</li>
+            <li>Data-driven Testing (Excel)</li>
+            <li>Katalon Studio Automation</li>
+            <li>Playwright Framework</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>🔌 API Testing</h3>
+          <ul>
+            <li>Postman</li>
+            <li>REST API testing – CRUD operations</li>
+            <li>API workflow & response validation</li>
+            <li>Request/Response verification</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>⚡ Performance & Security</h3>
+          <ul>
+            <li>JMeter – Basic Load Testing</li>
+            <li>Performance bottleneck identification</li>
+            <li>User load simulation</li>
+            <li>Security testing basics</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>💻 Development Knowledge</h3>
+          <ul>
+            <li>Java fundamentals</li>
+            <li>Node.js (CRUD APIs)</li>
+            <li>SQL queries</li>
+            <li>GitHub version control</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>📝 Documentation</h3>
+          <ul>
+            <li>Test Plans, Test Cases, RTM</li>
+            <li>Bug Reports</li>
+            <li>Test Summary Reports</li>
+            <li>Daily Status Reports</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- <section id="services">
+        <h2 class="section-title">Services I Offer</h2>
+        <p class="section-subtitle">Comprehensive quality assurance solutions for your projects</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🧪</div>
+                <h3>Manual Testing</h3>
+                <p>Thorough manual testing including functional, regression, smoke, and sanity testing with detailed bug reports and evidence.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>Test Automation</h3>
+                <p>Build robust automation frameworks using Selenium, Katalon Studio, and Playwright with POM design pattern.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile & Web Testing</h3>
+                <p>Comprehensive testing for mobile apps and web applications across different devices and browsers.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>API Testing</h3>
+                <p>Complete API testing using Postman, validating CRUD operations, workflows, and response accuracy.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Performance Testing</h3>
+                <p>Load and performance testing using JMeter to ensure your application handles user traffic efficiently.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Test Documentation</h3>
+                <p>Create comprehensive test plans, test cases, RTM, and detailed reports for complete test coverage.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- GPT CODE Services -->
+    <section id="services">
+      <div class="container">
+        <h2 class="services-title">SERVICES I OFFER</h2>
+        <!-- <p class="services-subtitle">Comprehensive quality assurance solutions for your projects</p> -->
+
+        <div class="services-grid">
+
+          <!-- 1. Web & Mobile App QA -->
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3 class="service-heading">Web & Mobile App QA</h3>
+            <p class="service-meta">Functional • Regression • UX</p>
+
+            <ul class="service-list">
+              <li>End-to-end testing of user flows</li>
+              <li>Regression passes before major releases</li>
+              <li>Responsive testing across devices (mobile, tablet, desktop)</li>
+              <li>Cross-browser checks on major browsers</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">Web Apps</span>
+              <span class="tag">Mobile Apps</span>
+            </div>
+          </div>
+
+          <!-- 2. E-commerce Testing -->
+          <div class="service-card">
+            <div class="service-icon">🛒</div>
+            <h3 class="service-heading">E-commerce Testing</h3>
+            <p class="service-meta">Cart • Checkout • Payments</p>
+
+            <ul class="service-list">
+              <li>Product listing & search validation</li>
+              <li>Cart, checkout & payment flow testing</li>
+              <li>Coupon, discounts & pricing validation</li>
+              <li>Order confirmation & email verification</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">E-commerce</span>
+              <span class="tag">Conversion-Focused</span>
+            </div>
+          </div>
+
+          <!-- 3. API Testing -->
+          <div class="service-card">
+            <div class="service-icon">🔌</div>
+            <h3 class="service-heading">API Testing</h3>
+            <p class="service-meta">Postman • REST APIs</p>
+
+            <ul class="service-list">
+              <li>CRUD API testing with Postman</li>
+              <li>Chained workflows and integration testing</li>
+              <li>Response body, status code & header validation</li>
+              <li>Basic error handling & edge-case coverage</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">REST</span>
+              <span class="tag">Postman</span>
+            </div>
+          </div>
+
+          <!-- 4. Automation with Selenium / Katalon -->
+          <div class="service-card">
+            <div class="service-icon">🤖</div>
+            <h3 class="service-heading">Automation with Selenium / Katalon</h3>
+            <p class="service-meta">Regression & Reusable Suites</p>
+
+            <ul class="service-list">
+              <li>Basic UI automation using Selenium (Java)</li>
+              <li>Katalon Studio based automation frameworks</li>
+              <li>Data-driven tests using Excel</li>
+              <li>Login, form & workflow automation</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">Selenium</span>
+              <span class="tag">Katalon</span>
+            </div>
+          </div>
+
+          <!-- 5. Test Documentation -->
+          <div class="service-card">
+            <div class="service-icon">📄</div>
+            <h3 class="service-heading">Test Documentation & Strategy</h3>
+            <p class="service-meta">Test Plans • Cases • Reports</p>
+
+            <ul class="service-list">
+              <li>Test plan & test case creation</li>
+              <li>Requirement Traceability Matrix (RTM)</li>
+              <li>Bug reports with clear repro steps & evidence</li>
+              <li>Test summary & daily execution reports</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">Documentation</span>
+              <span class="tag">Planning</span>
+            </div>
+          </div>
+
+          <!-- 6. Basic Performance Checks -->
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-heading">Basic Performance Checks</h3>
+            <p class="service-meta">JMeter • Light Load Scenarios</p>
+
+            <ul class="service-list">
+              <li>Simple load scenarios using JMeter</li>
+              <li>Identifying basic performance bottlenecks</li>
+              <li>Observations with actionable suggestions</li>
+            </ul>
+
+            <div class="service-tags">
+              <span class="tag">JMeter</span>
+              <span class="tag">Performance</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <!-- <p class="section-subtitle">Let's discuss your testing needs</p> -->
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3 style="margin-bottom: 2rem; color: var(--primary);">Contact Information</h3>
+          <a href="mailto:rachana03@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>build.rachana03@gmail.com</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.fiverr.com/s/Eg7j6Bq" class="fas fa-envelope" aria-label="Mail" target="_blank">
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-details">
+              <h4>Fiverr</h4>
+              <p>@qa_rachana</p>
+            </div>
+          </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/rachana-jaiswar-9739442a0" class="fab fa-linkedin" aria-label="linkedin"
+            target="_blank">
+            <div class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/yourprofile</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/Rachana20037" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <p>Open for freelance projects</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="margin-bottom: 2rem; color: var(--primary);">Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <div class="social-links">
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="GitHub">🔗</a>
+            <a href="#" aria-label="Email">📧</a>
+            <a href="#" aria-label="Fiverr">💚</a>
+        </div>
+        <p>&copy; 2024 QA Professional. All rights reserved.</p>
+    </footer> -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <p>© <span id="year"></span> Preet Jaiswar • Freelance QA Tester</p>
+          <div class="social-links">
+            <!-- Replace # with your real links -->
+            <!-- <a href="#" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Visit GitHub profile">GitHub</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Visit Fiverr profile">Fiverr</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Visit Upwork profile">Upwork</a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                nav.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe skill categories and service cards
+        document.querySelectorAll('.skill-category, .service-card, .stat-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script> -->
+
+    <script>
+      // =========================
+      // Smooth scroll helper (for buttons like "Let’s Work", "View Services")
+      // =========================
+      function scrollToSection(id) {
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      }
+
+      // =========================
+      // Active nav section on scroll (ScrollSpy)
+      // =========================
+      const navLinksEls = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("section[id]");
+
+      function updateActiveLink() {
+        const scrollY = window.pageYOffset + 150; // adjust offset if needed
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinksEls.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${sectionId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveLink);
+      window.addEventListener("load", updateActiveLink); // sets initial active
+
+
+      // =========================
+      // Active nav on click
+      // =========================
+      navLinksEls.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          // allow smooth scroll for anchors
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+
+          navLinksEls.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+
+
+      // =========================
+      // Mobile Navigation Toggle (uses your existing #navToggle and .nav-links-cta)
+      // =========================
+      const navToggle = document.getElementById("navToggle");
+      const navLinksCta = document.querySelector(".nav-links-cta");
+
+      if (navToggle && navLinksCta) {
+        navToggle.addEventListener("click", () => {
+          navToggle.classList.toggle("open");
+          navLinksCta.classList.toggle("nav-mobile-open");
+        });
+
+        // close mobile nav when clicking a link
+        navLinksEls.forEach((link) => {
+          link.addEventListener("click", () => {
+            navToggle.classList.remove("open");
+            navLinksCta.classList.remove("nav-mobile-open");
+          });
+        });
+      }
+
+
+      // =========================
+      // Intersection Observer for fade-in (skills, services, stats)
+      // =========================
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px"
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".skill-category, .service-card, .stat-card")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
+
+
+      // =========================
+      // Contact Form handler
+      // =========================
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your message! I will get back to you soon.");
+          e.target.reset();
+        });
+      }
+
+
+      // =========================
+      // Footer year
+      // =========================
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+
+
+
+</body>
+
+</html>
